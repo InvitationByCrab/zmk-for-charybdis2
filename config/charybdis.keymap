@@ -76,7 +76,19 @@
                                 &trans  &trans    &trans
             >;
         };
+        
+        // --------- 在这里添加轨迹球监听 ---------
+        trackball_listener {
+            compatible = "zmk,input-listener";
+            device = <&trackball>;
 
+            bindings = <
+                &cc VOL_UP layer 3
+                &cc VOL_DOWN layer 3
+                &cc ZOOM_IN layer 3
+                &cc ZOOM_OUT layer 3
+            >;
+        };
         /* layer_2 {
             bindings = <
 &none  &none   &none    &none   &none         &none         &kp N1         &none         &none     &none  &none   &to 0
