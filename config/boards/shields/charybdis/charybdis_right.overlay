@@ -57,7 +57,6 @@
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         scroll-layers = <1>;
         snipe-layers = <2>;
-		scroll-layers = <3>;
       // automouse-layer = <3>;
     };
 };
@@ -67,12 +66,42 @@
 
 
 
-
+/*
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
     };
 };
+*/
 
+/*
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
 
+        bindings = <
+            &cc VOL_UP    // 滚轮向上 → 音量加
+            &cc VOL_DOWN  // 滚轮向下 → 音量减
+            &cc ZOOM_IN   // 放大 (需要自己映射，比如 Ctrl + '+')
+            &cc ZOOM_OUT  // 缩小 (需要自己映射，比如 Ctrl + '-')
+        >;
+    };
+};
+*/
+
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        // Layer 3 → 把滚轮映射为音量控制
+        layers = <3>;
+
+        bindings = <
+            &cc VOL_UP    // 向上滚 → 音量加
+            &cc VOL_DOWN  // 向下滚 → 音量减
+        >;
+    };
+};
