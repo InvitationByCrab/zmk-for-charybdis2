@@ -6,10 +6,6 @@
  
 #include "charybdis.dtsi"
 
-#include <dt-bindings/input/input-event-codes.h>
-#include <input/processors.dtsi>
-
-
 &default_transform {
     col-offset = <6>;
 }; 
@@ -69,54 +65,11 @@
 //RGB bus
 
 
-
-/*
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
     };
 };
-*/
 
-/* Trackball 设备配置 */
-&spi1 {
-    status = "okay";
-    trackball: trackball@0 {
-        compatible = "pixart,pmw3610";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <600>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-    };
-};
 
-/* 输入监听器：默认滚动，Layer3 音量 */
-&trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-    input-processors = <&zip_xy_to_scroll_mapper>;  /* 默认将 XY 映射为滚动 */
-
-    /* Layer3 时使用的覆盖：垂直滚动映射为音量键 */
-    vol_layer {
-        layers = <3>;
-        input-processors = <&zip_scroll_scaler 1 1 &zip_button_behaviors>;
-    };
-};
-
-/* 自定义行为：音量增减 */
-behaviors {
-    kp_vol_up: vol_up {
-        compatible = "zmk,behavior-key-press";
-        #binding-cells = <1>;
-        label = "VOLUME UP";
-    };
-    kp_vol_down: vol_down {
-        compatible = "zmk,behavior-key-press";
-        #binding-cells = <1>;
-        label = "VOLUME DOWN";
-    };
-};
