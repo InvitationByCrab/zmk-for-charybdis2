@@ -76,16 +76,6 @@
                                 &mkp MB1  &mkp MB2    &trans
             >;
         };
-        
-        // --------- 在这里添加轨迹球监听 ---------
-        trackball_listener: trackball_listener {
-            compatible = "zmk,input-listener";
-            device = <&trackball>;
-            bindings = <
-                &cc VOL_UP
-                &cc VOL_DOWN
-            >;
-        };
 
         /* layer_2 {
             bindings = <
