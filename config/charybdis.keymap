@@ -19,6 +19,17 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        to2 {
+            bindings = <&to 2>;
+            key-positions = <28 27>;
+            layers = <0>;
+            slow-release;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -46,12 +57,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mkp MB3  &to 0       &trans  &trans
-                                &mkp MB1  &mkp MB2    &trans
+&trans     &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp X   &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &mkp MB3  &to 0       &trans  &trans
+                                   &mkp MB1  &mkp MB2    &trans
             >;
         };
 
