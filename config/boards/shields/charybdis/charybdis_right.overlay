@@ -76,6 +76,18 @@
 */
 
 / {
+  kp_vol_up: kp_vol_up {
+        label = "VOL_UP";
+        compatible = "zmk,key";
+        #binding-cells = <0>;
+    };
+
+    kp_vol_down: kp_vol_down {
+        label = "VOL_DOWN";
+        compatible = "zmk,key";
+        #binding-cells = <0>;
+    };
+
 	trackball_listener_volume: trackball_listener_volume {
 	    compatible = "zmk,input-listener";
 	    device = <&trackball>;
