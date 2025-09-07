@@ -76,11 +76,11 @@
 */
 
 / {
-    trackball_listener_volume: trackball_listener_volume {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
-        layers = <3>;   // 只在 layer3 生效
-    };
+	trackball_listener_volume: trackball_listener_volume {
+	    compatible = "zmk,input-listener";
+	    device = <&trackball>;
+	    bindings = <&inc_dec_kp &kp_vol_up &kp_vol_down>;
+	    layers = <3>;   // 只在 layer3 生效
+	};
 };
 
