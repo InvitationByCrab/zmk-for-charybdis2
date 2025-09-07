@@ -75,34 +75,12 @@
 };
 */
 
-/*
 / {
-    trackball_listener: trackball_listener {
+    trackball_listener_volume: trackball_listener_volume {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
-        bindings = <
-            &cc VOL_UP    // 滚轮向上 → 音量加
-            &cc VOL_DOWN  // 滚轮向下 → 音量减
-            &cc ZOOM_IN   // 放大 (需要自己映射，比如 Ctrl + '+')
-            &cc ZOOM_OUT  // 缩小 (需要自己映射，比如 Ctrl + '-')
-        >;
+        bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
+        layers = <3>;   // 只在 layer3 生效
     };
 };
-*/
-/*
-/ {
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
 
-        // Layer 3 → 把滚轮映射为音量控制
-        layers = <3>;
-
-        bindings = <
-            &cc VOL_UP    // 向上滚 → 音量加
-            &cc VOL_DOWN  // 向下滚 → 音量减
-        >;
-    };
-};
-*/
