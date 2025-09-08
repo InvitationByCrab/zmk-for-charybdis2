@@ -11,9 +11,9 @@
 
 / {
     behaviors {
-        new_behavior: new_behavior {
+        test: test {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "TEST";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DEL>, <&kp LEFT_ALT>;
         };
@@ -32,7 +32,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <6 7 6 7 8 9 18 19 20 21 30 31 32 33 42 43 44 45 51 52 55 10 11 22 23 34 35 46 47>;
         };
 
         hmr: homewrow_mods_right {
@@ -42,7 +41,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 53 54>;
         };
     };
 
@@ -88,12 +86,12 @@
 
         layer_1 {
             bindings = <
-&kp ESC         &kp F1    &kp F2         &kp F3            &kp F4      &kp F5        &kp F6           &kp F7    &kp F8    &kp F9            &kp F10            &kp DEL
-&kp GRAVE       &kp HOME  &kp PAGE_UP    &alt_shift_dance  &none       &none         &none            &none     &kp UP    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
-&kp LEFT_SHIFT  &kp END   &kp PAGE_DOWN  &none             &bt BT_NXT  &bt BT_CLR    &none            &kp LEFT  &kp DOWN  &kp RIGHT         &kp SQT            &kp ENTER
-&kp LCTRL       &none     &to 3          &mo 2             &none       &none         &none            &none     &kp F11   &kp MINUS         &kp EQUAL          &kp RIGHT_SHIFT
-                                         &kp LEFT_ALT      &kp SPACE   &to 0         &kp RIGHT_SHIFT  &none
-                                                           &mkp MB1    &mkp MB2      &kp ENTER
+&kp ESC         &kp F1    &kp F2         &kp F3        &kp F4      &kp F5        &kp F6           &kp F7    &kp F8    &kp F9            &kp F10            &kp DEL
+&kp GRAVE       &kp HOME  &kp PAGE_UP    &test         &none       &none         &none            &none     &kp UP    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+&kp LEFT_SHIFT  &kp END   &kp PAGE_DOWN  &none         &bt BT_NXT  &bt BT_CLR    &none            &kp LEFT  &kp DOWN  &kp RIGHT         &kp SQT            &kp ENTER
+&kp LCTRL       &none     &to 3          &mo 2         &none       &none         &none            &none     &kp F11   &kp MINUS         &kp EQUAL          &kp RIGHT_SHIFT
+                                         &kp LEFT_ALT  &kp SPACE   &to 0         &kp RIGHT_SHIFT  &none
+                                                       &mkp MB1    &mkp MB2      &kp ENTER
             >;
         };
 
