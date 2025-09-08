@@ -32,6 +32,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
 
         hmr: homewrow_mods_right {
@@ -41,6 +42,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -67,6 +69,18 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <13 14>;
+        };
+
+        double-quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <25 26>;
+            layers = <0>;
+        };
+
+        single-quotation {
+            bindings = <&kp SQT>;
+            key-positions = <33 34>;
+            layers = <0>;
         };
     };
 
