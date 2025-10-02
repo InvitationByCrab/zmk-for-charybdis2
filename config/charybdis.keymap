@@ -69,6 +69,16 @@
             bindings = <&mkp MB5>;
             key-positions = <21 22>;
         };
+
+            scroll_up {
+        bindings = <&mkp MWU>;   // 마우스 휠 업
+        key-positions = <14 15 16>;  // S D F 키 위치
+    };
+
+    scroll_down {
+        bindings = <&mkp MWD>;   // 마우스 휠 다운
+        key-positions = <14 15 16>;  // S D F 키 위치
+    };
     };
 
     behaviors {
@@ -100,6 +110,7 @@
 &kp NON_US_BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NON_US_BACKSLASH    &kp LEFT_PARENTHESIS  &kp F1   &kp F2  &kp F3  &kp RIGHT_PARENTHESIS
                                     &kp N0        &kp SPACE     &to 0                   &kp F11               &kp F12
             >;
+                include = "layer_0";
         };
 
         layer_2 {
@@ -109,6 +120,7 @@
 &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp EQUAL  &kp RBKT  &kp SQT  &kp PERIOD   &kp SLASH
                        &none           &none            &to 0            &none      &none
             >;
+                include = "layer_0";
         };
 
         layer_3 {
