@@ -7,7 +7,7 @@
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
-    quick-tap-ms = <150>;
+    quick-tap-ms = <110>;
 };
 
 / {
@@ -49,6 +49,36 @@
             bindings = <&mkp MB2>;
             key-positions = <27 28>;
         };
+
+        rAlt {
+            bindings = <&kp LG(RIGHT_ALT)>;
+            key-positions = <12 13>;
+        };
+
+        rAlt2 {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <16 17>;
+        };
+
+        mb4 {
+            bindings = <&mkp MB4>;
+            key-positions = <23 22>;
+        };
+
+        mb5 {
+            bindings = <&mkp MB5>;
+            key-positions = <21 22>;
+        };
+    };
+
+    behaviors {
+        toggleLayer: toggleLayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOGGLELAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&to>, <&kp>;
+        };
     };
 
     keymap {
@@ -56,27 +86,27 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y          &kp U             &kp I               &kp O           &kp P
-&mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H          &mt LEFT_SHIFT J  &mt K LEFT_CONTROL  &mt LEFT_ALT L  &mt LEFT_WIN SEMI
-&kp Z           &kp X           &kp C        &kp V             &kp B        &kp N          &kp M             &kp COMMA           &kp DOT         &kp FSLH
-                                &lt 1 ESC    &kp SPACE         &lt 2 TAB    &kp BACKSPACE  &kp RIGHT_ALT
+&kp Q           &kp W           &kp E                  &kp R             &kp T                 &kp Y      &kp U             &kp I               &kp O           &kp P
+&mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL D            &mt LEFT_SHIFT F  &kp G                 &kp H      &mt LEFT_SHIFT J  &mt LEFT_CONTROL K  &mt LEFT_ALT L  &mt LEFT_WIN SEMI
+&kp Z           &kp X           &kp C                  &kp V             &kp B                 &kp N      &kp M             &kp COMMA           &kp DOT         &kp FSLH
+                                &toggleLayer 1 ESCAPE  &kp SPACE         &toggleLayer 2 TAB    &kp ENTER  &kp BACKSPACE
             >;
         };
 
         layer_1 {
             bindings = <
-&kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS               &kp F6     &kp F7            &kp F8         &kp F9     &kp F10
-&kp CAPSLOCK    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL               &kp N6     &kp N7            &kp N8         &kp N9     &kp N0
-&kp LEFT_SHIFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NON_US_BACKSLASH    &kp MINUS  &kp LEFT_BRACKET  &kp SEMICOLON  &kp COMMA  &kp BACKSLASH
-                              &kp N0        &kp SPACE     &to 0                   &kp F11    &kp F12
+&kp GRAVE             &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS               &kp LEFT_BRACKET      &kp F7   &kp F8  &kp F9  &kp RIGHT_BRACKET
+&kp CAPSLOCK          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL               &kp LEFT_BRACE        &kp F4   &kp F5  &kp F6  &kp RIGHT_BRACE
+&kp NON_US_BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NON_US_BACKSLASH    &kp LEFT_PARENTHESIS  &kp F1   &kp F2  &kp F3  &kp RIGHT_PARENTHESIS
+                                    &kp N0        &kp SPACE     &to 0                   &kp F11               &kp F12
             >;
         };
 
         layer_2 {
             bindings = <
-&none  &bootloader     &none           &none            &none            &none      &none     &none    &none       &none
-&none  &none           &kp UP_ARROW    &none            &kp PAGE_UP      &none      &none     &none    &none       &none
-&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp EQUAL  &kp RBKT  &kp SQT  &kp PERIOD  &kp SLASH
+&none  &bootloader     &none           &none            &none            &none      &none     &none    &bootloader  &none
+&none  &none           &kp UP_ARROW    &none            &kp PAGE_UP      &none      &none     &none    &none        &none
+&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp EQUAL  &kp RBKT  &kp SQT  &kp PERIOD   &kp SLASH
                        &none           &none            &to 0            &none      &none
             >;
         };
