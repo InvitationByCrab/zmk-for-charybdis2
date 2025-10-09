@@ -51,7 +51,7 @@
 
         to2 {
             bindings = <&mo 2>;
-            key-positions = <28 27>;
+            key-positions = <15 28>;
             layers = <0>;
             slow-release;
         };
@@ -119,6 +119,13 @@
         bigright {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <43 44>;
+        };
+
+        tog2 {
+            bindings = <&tog 2>;
+            key-positions = <27 16>;
+            slow-release;
+            layers = <0>;
         };
     };
 
