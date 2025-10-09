@@ -97,6 +97,29 @@
             bindings = <&kp PIPE>;
             key-positions = <21 22>;
         };
+
+        leftsquarebracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        rightsquarebracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
+
+        bigleft {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <39 40>;
+            layers = <0>;
+        };
+
+        bigright {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <43 44>;
+        };
     };
 
     keymap {
