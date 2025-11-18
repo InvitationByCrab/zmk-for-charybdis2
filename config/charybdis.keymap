@@ -44,6 +44,13 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        dpi_low: dpi_low {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;  
+            bindings = <&trackball 5>; 
+        };
+
     };
 
     combos {
@@ -167,7 +174,7 @@
 
         layer_3 {
             bindings = <
-&mod-morph &mouse_movement_scale 5  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &dpi_low  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
