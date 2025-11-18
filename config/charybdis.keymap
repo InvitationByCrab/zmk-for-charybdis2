@@ -44,6 +44,12 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+        dpi_low: dpi_low {
+                    compatible = "zmk,behavior-mod-morph";
+                    #binding-cells = <0>;
+                    bindings = <&pmw3610_normal &mouse_movement_scale 5>; // scale=0.5
+                };
+
     };
 
     combos {
