@@ -167,10 +167,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
                         &trans  &mkp MB3  &to 0       &trans  &trans
                                 &mkp MB1  &mkp MB2    &trans
             >;
