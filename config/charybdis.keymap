@@ -154,7 +154,7 @@
 &kp ESC         &kp F1    &kp F2         &kp F3        &kp F4         &kp F5      &kp F6           &kp F7         &kp F8    &kp F9            &kp F10            &kp DEL
 &kp GRAVE       &kp HOME  &kp PAGE_UP    &test         &none          &none       &none            &none          &kp UP    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
 &kp LEFT_SHIFT  &kp END   &kp PAGE_DOWN  &none         &none          &none       &kp TAB          &kp LEFT       &kp DOWN  &kp RIGHT         &kp SQT            &kp ENTER
-&kp LCTRL       &none     &to 3          &mo 2         &kp BACKSPACE  &kp DEL     &kp ESCAPE       &none          &kp F11   &kp MINUS         &kp EQUAL          &kp RIGHT_SHIFT
+&kp LCTRL       &none     &mo 3          &mo 2         &kp BACKSPACE  &kp DEL     &kp ESCAPE       &none          &kp F11   &kp MINUS         &kp EQUAL          &kp RIGHT_SHIFT
                                          &kp LEFT_ALT  &kp SPACE      &to 0       &kp RIGHT_SHIFT  &kp RIGHT_ALT
                                                        &mkp MB1       &mkp MB2    &kp RCTRL
             >;
@@ -176,7 +176,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans         &trans  &trans    &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans         &trans  &trans    &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans         &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans         &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &to 0          &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
                         &trans  &mkp MB3  &lt 1 SPACE    &trans  &trans
                                 &mkp MB1  &mkp MB2       &trans
             >;
